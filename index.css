@@ -87,13 +87,27 @@ nav {
 }
 
 /* Servicesにホバー時、黄色に変更 */
-.menu_nav > li:hover > a {
+.menu_nav > li:hover > a:hover {
     background-color: yellow;
     color: black;
 }
 
-/* ドロップダウンがホバーされたら、Servicesの色を元に戻す */
-.menu_nav > li:hover .dropdown-menu:hover ~ a {
+.dropdown-menu{
+    background-color: yellow;
+    color: black;
+}
+
+.dropdown-menu li a {
+    background-color: red;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.dropdown-menu > li > a {
     background-color: red;
     color: white;
 }

@@ -32,19 +32,13 @@ nav {
     display: block;
     font-weight: bold;
     white-space: nowrap;
-    padding: 15px 20px;
+    padding: 30px 40px;
     color: white;
     text-decoration: none;
     background-color: red;
     width: 200px;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Servicesにホバー時、黄色に変更 */
-.menu_nav > li:hover > a {
-    background-color: yellow;
-    color: black;
 }
 
 /* ドロップダウンメニューの設定 */
@@ -73,6 +67,7 @@ nav {
     display: block;
     padding: 10px;
     color: white;
+    padding: 30px 40px;
     text-decoration: none;
     font-weight: bold; /* 文字を太字に */
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -89,4 +84,17 @@ nav {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Servicesにホバー時、黄色に変更 */
+.menu_nav > li:hover > a {
+    background-color: yellow;
+    color: black;
+}
+
+/* ドロップダウンがホバーされたら、Servicesの色を元に戻す */
+.menu_nav > li:hover .dropdown-menu:hover + a,
+.menu_nav > li:hover .dropdown-menu:hover {
+    background-color: red;
+    color: white;
 }

@@ -2,11 +2,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* 隙間をつぶす */
+    box-sizing: border-box; /* 隙間を作らない */
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;/* フォントの指定 */
     margin: 0;
     padding: 0;
     background-color: white;
@@ -20,55 +20,57 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: flex-start;
+    display: flex;/* フレックスのコンテナ */
+    justify-content: flex-start;/* 左寄せ */
 }
 
 .menu_nav li {
-    position: relative;
+    position: relative; /* みんなの恋人相対配置 */
 }
 
 .menu_nav li a {
-    display: block;
-    font-weight: bold;
-    white-space: nowrap;
+    /* インライン要素だからブロックにしないと色んなおしゃれが効きませんよ */
+    display: block; /* ブロックに */
+    font-weight: bold; /*太字*/
+    white-space: nowrap; /*折り返しダメ絶対*/
     padding: 30px 40px;
     color: white;
-    text-decoration: none;
+    text-decoration: none;/* リンクに装飾されるのを消し飛ばす */
     background-color: red;
     width: 200px;
     text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* 背景色と文字色の変化を0.3秒かけて */
 }
 
 /* ドロップダウンメニューの設定 */
 .dropdown-menu {
-    list-style: none;
+    list-style: none;/* リストのまるぽちアンチ */
     padding: 0;
     margin: 0;
-    position: absolute;
+    position: absolute; /* 絶対配置!!!! */
     top: 100%;
     left: 0;
     background-color: red;
     width: 200px;
     text-align: center;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;/* 見えないぞ！ */
+    opacity: 0;/* 色を失った世界 */
+    transform: translateY(-10px);/* ダメ押しの上移動 */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;/* 遷移をぬるっといろかえるよー */
 }
 
 /* ドロップダウンメニューの各アイテム */
 .dropdown-menu li {
-    width: 100%;
+    width: 100%;/* 親いっぱいにべちゃーって表示 */
 }
 
 .dropdown-menu li a {
+    /* aタグはインライン要素だからブロックにしないとおしゃれ出来ませんよ定期 */
     display: block;
     padding: 10px;
     color: white;
     padding: 30px 40px;
-    text-decoration: none;
+    text-decoration: none;/* aタグのリンクらしいデザインを消し飛ばす */
     font-weight: bold; /* 文字を太字に */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -81,9 +83,9 @@ nav {
 
 /* ドロップダウンの表示 */
 .menu_nav > li:hover .dropdown-menu {
-    visibility: visible; /* ボックスをこんにちわ */
-    opacity: 1;
-    transform: translateY(0);
+    visibility: visible; /* ボックスを表示 */
+    opacity: 1;/* 色を得た */
+    transform: translateY(0);/* 位置もどす */
 }
 
 /* Servicesを直接ホバー時、黄色に変更 */
@@ -92,18 +94,13 @@ nav {
     color: black;
 }
 
-/* ドロップダウンメニュー */
-.dropdown-menu{
-    background-color: yellow;
-    color: black;
-}
-
-
+/* ドロップダウンメニューのアイテムのスタイルを変更するやつ */
 .dropdown-menu li a {
     background-color: red;
     color: white;
 }
 
+/* ドロップダウンメニュー内のアイテムホバー時のスタイルいじり */
 .dropdown-menu li a:hover {
     background-color: yellow;
     color: black;

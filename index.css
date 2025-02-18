@@ -81,7 +81,7 @@ nav {
 
 /* ドロップダウンの表示 */
 .menu_nav > li:hover .dropdown-menu {
-    visibility: visible;
+    visibility: visible; /* ボックスをこんにちわ */
     opacity: 1;
     transform: translateY(0);
 }
@@ -93,8 +93,7 @@ nav {
 }
 
 /* ドロップダウンがホバーされたら、Servicesの色を元に戻す */
-.menu_nav > li:hover .dropdown-menu:hover + a,
-.menu_nav > li:hover .dropdown-menu:hover {
+.menu_nav > li:hover .dropdown-menu:hover ~ a {
     background-color: red;
     color: white;
 }

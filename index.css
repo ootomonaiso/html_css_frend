@@ -81,7 +81,7 @@ nav {
 /* メニュー項目ホバー時の背景色を黄色に変更 */
 .dropdown-menu li a:hover {
     background-color: yellow;
-    color: white;
+    color: black;
 }
 
 /* ドロップダウンの表示 */
